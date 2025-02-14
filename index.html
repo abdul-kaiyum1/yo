@@ -1,136 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Will You Be Mine?</title>
-  <!-- Google Fonts for a romantic touch -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    /* Base styles with animated gradient background */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #f78ca0, #f9748f, #fd868c, #fe9a8b);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      overflow: hidden;
-      position: relative;
-      min-height: 100vh;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .container {
-      text-align: center;
-      padding: 100px 20px;
-      color: #fff;
-      position: relative;
-      z-index: 2;
-    }
-    h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-    }
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 30px;
-      position: relative;
-    }
-    .button {
-      padding: 15px 30px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: none;
-      border-radius: 30px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .button:hover {
-      background-color: rgba(255, 255, 255, 1);
-      transform: scale(1.1);
-    }
-    #secretMessage {
-      margin-top: 20px;
-      font-size: 1.8rem;
-      display: none;
-    }
-    /* Floating heart animation */
-    .heart {
-      position: absolute;
-      background: url('https://i.imgur.com/6QOQ5iR.png') no-repeat center center;
-      background-size: contain;
-      width: 50px;
-      height: 50px;
-      opacity: 0.8;
-      animation: float 5s ease-in-out infinite;
-      z-index: 1;
-    }
-    @keyframes float {
-      0% {
-        transform: translateY(0) scale(0.8);
-        opacity: 0.8;
-      }
-      50% {
-        transform: translateY(-100px) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0) scale(0.8);
-        opacity: 0.8;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>You Are Loved!</h1>
-    <p>Will you be mine?</p>
-    <div class="button-container">
-      <button id="yesButton" class="button">Yes</button>
-      <button id="noButton" class="button">No</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22885016"
+        data-share-method="host"
+        data-aspect-ratio="1.04918"
+        data-width="100%"
+      >
+        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
+        >from
+        <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <h1>DO you love me? 🤗</h1>
+      <p>~Penguin is all yours</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no1.html">No</a>
+      </div>
     </div>
-    <div id="secretMessage">
-      I love you more than words can express!
-    </div>
-  </div>
-  <script>
-    // Reveal the secret message when "Yes" is clicked
-    document.getElementById("yesButton").addEventListener("click", function(){
-      document.getElementById("secretMessage").style.display = "block";
-    });
-    // Make the "No" button elusive: it randomly repositions on hover
-    const noButton = document.getElementById("noButton");
-    noButton.addEventListener("mouseover", function(){
-      const maxX = window.innerWidth - noButton.offsetWidth;
-      const maxY = window.innerHeight - noButton.offsetHeight;
-      const randomX = Math.floor(Math.random() * maxX);
-      const randomY = Math.floor(Math.random() * maxY);
-      noButton.style.position = 'absolute';
-      noButton.style.left = randomX + 'px';
-      noButton.style.top = randomY + 'px';
-    });
-    // Create floating hearts for a playful effect
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + '%';
-      heart.style.top = Math.random() * 100 + '%';
-      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
-    }
-    setInterval(createHeart, 800);
-  </script>
-</body>
+  </body>
 </html>
