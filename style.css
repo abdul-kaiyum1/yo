@@ -1,44 +1,97 @@
-/* author - deepak tiwari */
+/* author - deepak tiwari | updated for maximum romance */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-  }
+    font-family: 'Poppins', sans-serif;
+}
   
-  body {
+body {
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffe5e5;
-  }
+    /* Soft, romantic gradient background */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    overflow: hidden; 
+}
   
-  .container {
+/* Styling the container like a glowing love letter/card */
+.container {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     gap: 20px;
-    max-width: 500px;
+    max-width: 450px;
     margin: 20px;
-  }
+    background: rgba(255, 255, 255, 0.65);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(255, 105, 135, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    z-index: 10;
+}
   
-  .container .tenor-gif-embed {
-    max-width: 200px;
-  }
+.container .tenor-gif-embed {
+    max-width: 220px;
+    border-radius: 15px;
+    pointer-events: none; /* Stops them from clicking away from the page */
+}
   
-  .container .btn {
+/* Beautiful cursive font for the main question */
+.romantic-text {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4d6d;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.sub-text {
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+  
+.container .btn {
     display: flex;
-    gap: 25px;
-  }
+    gap: 20px;
+    margin-top: 15px;
+}
   
-  .btn a {
+.btn a {
     text-decoration: none;
-    color: #111;
-    background: #fff;
-    padding: 10px 25px;
-    border-radius: 8px;
-    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
-  }
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* The "Yes" button gets a romantic crimson color and a pop-out hover effect */
+.btn-yes {
+    color: white;
+    background: #ff4d6d;
+    box-shadow: 0 8px 15px rgba(255, 77, 109, 0.4);
+}
+
+.btn-yes:hover {
+    background: #ff2a55;
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(255, 77, 109, 0.6);
+}
+
+/* The "No" button shrinks slightly to discourage them from clicking it! */
+.btn-no {
+    color: #666;
+    background: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.btn-no:hover {
+    background: #f1f1f1;
+    transform: scale(0.95);
+}
